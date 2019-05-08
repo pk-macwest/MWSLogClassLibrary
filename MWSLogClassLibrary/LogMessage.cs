@@ -71,6 +71,44 @@ public class mwsClassLogMessage
 
         return logLevel;
     }
+
+
+    public mwsEnumLogLevels mwsIntTologlevel(int value)
+    {
+        mwsEnumLogLevels logLevel = mwsEnumLogLevels.TYPE_INFORMATION;
+        switch (value)
+        {
+            case 0:
+                logLevel = mwsEnumLogLevels.TYPE_FATAL;
+                break;
+
+            case 1:
+                logLevel = mwsEnumLogLevels.TYPE_ERROR;
+                break;
+
+            case 2:
+                logLevel = mwsEnumLogLevels.TYPE_WARNING;
+                break;
+
+            case 3:
+                logLevel = mwsEnumLogLevels.TYPE_INFORMATION;
+                break;
+
+            case 4:
+                logLevel = mwsEnumLogLevels.TYPE_NONE;
+                break;
+
+            case 5:
+                logLevel = mwsEnumLogLevels.TYPE_DEBUG;
+                break;
+
+            case 6:
+                logLevel = mwsEnumLogLevels.TYPE_TEST;
+                break;
+        }
+
+        return logLevel;
+    }
     /// <summary>
     /// Product Name
     /// </summary>
